@@ -13,12 +13,12 @@ interface ProductoDao {
     fun obtRegistro(id:Int):Flow<EntityProducto>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertarReg(producto: EntityProducto)
+   fun insertarReg(producto: EntityProducto)
 
     @Update
-    suspend fun actualizarReg(producto: EntityProducto)
+   fun actualizarReg(producto: EntityProducto)
 
     @Delete
-    suspend fun eliminarReg(producto: EntityProducto)
+   fun eliminarReg(producto: EntityProducto)
 
 }
